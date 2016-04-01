@@ -21,11 +21,16 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
+  solidus_version = [">= 1.2.2", "< 2"]
+
   s.has_rdoc = false
 
-  s.add_runtime_dependency 'solidus_backend', '~> 1.2.2'
+  s.add_dependency "solidus_core", solidus_version
+
   s.add_runtime_dependency 'deface'
 
+  s.add_development_dependency "solidus_backend", solidus_version
+  s.add_development_dependency "solidus_frontend", solidus_version
   s.add_development_dependency 'factory_girl', '~> 4.5'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails', '~> 3.4'

@@ -1,3 +1,6 @@
+require 'spree_core'
+require 'solidus_related_products'
+
 FactoryGirl.define do
   factory :relation, class: Spree::Relation do
     association :relatable, factory: :product

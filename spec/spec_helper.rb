@@ -21,6 +21,13 @@ require 'rspec-activemodel-mocks'
 require 'shoulda-matchers'
 require 'ffaker'
 require 'pry'
+require 'spree_core'
+require 'solidus_core'
+require 'solidus_backend'
+require 'solidus_related_products'
+
+Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |file| require file }
+Dir[Rails.root.join("spec/factories/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.fail_fast = false
@@ -28,6 +35,8 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.raise_errors_for_deprecations!
   config.infer_spec_type_from_file_location!
+
+  config.include Spree::Relation, type: :model
 
   config.expect_with :rspec do |expectations|
     expectations.syntax = :expect
@@ -44,5 +53,3 @@ RSpec.configure do |config|
     end
   end
 end
-
-Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |file| require file }

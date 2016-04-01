@@ -1,6 +1,7 @@
+require 'spree_core'
+
 module SolidusRelatedProducts
   class Engine < Rails::Engine
-    require 'spree/core'
     isolate_namespace Spree
     engine_name 'solidus_related_products'
 
