@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
-  s.add_runtime_dependency 'solidus_backend', '~> 1.0'
+  s.add_runtime_dependency 'solidus_backend', '~> 1.2.2'
   s.add_runtime_dependency 'deface'
 
   s.add_development_dependency 'factory_girl', '~> 4.5'
