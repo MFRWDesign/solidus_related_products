@@ -7,10 +7,14 @@ module SolidusRelatedProducts
     Gem::Version.new VERSION::STRING
   end
 
+  def version_plain
+    VERSION::STRING
+  end
+
   module VERSION
     MAJOR = 1
-    MINOR = 0
-    TINY  = 0
+    MINOR = 2
+    TINY  = 2
     PRE   = nil
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
